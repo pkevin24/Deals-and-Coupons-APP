@@ -1,0 +1,20 @@
+.footer{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    /* color: rgb(255, 255, 255); */
+    text-align: center;
+    display: flex;
+  }
+  
+  .mini-footer {
+    /*position: fixed;*/
+    /* position: fixed; */
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(221, 221, 249);
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+}

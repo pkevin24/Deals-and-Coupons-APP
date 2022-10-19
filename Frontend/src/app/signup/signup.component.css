@@ -1,0 +1,125 @@
+/* .container1{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    height: 600px;
+}
+input[type=text]{
+    width: 100%;
+    border: 2px solid black;
+}
+input[type=email]{
+    width: 100%;
+    border: 2px solid black;
+}
+input[type=password]{
+    width: 100%;
+    border: 2px solid black;
+}
+input[type=number]{
+    width: 100%;
+    border: 2px solid black;
+}
+.form-control{
+    border-radius: 50px;
+ }
+
+.card{
+    margin-top: 50px;
+    border: 1px solid blue;
+    width: 500px;
+    padding: 45px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    margin-left: 145px;
+    border-radius: 35px;
+    background-color: bisque;
+    
+    
+} */
+
+.maincontainer{
+    width: 100%;
+    background: white;
+    height: 120vh;
+}
+.container1{
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 10px 30px 0px rgba(0,0,0,1);
+    padding: 30px;
+    background: white;
+}
+.container1 .title{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background: linear-gradient(to right,#f4524d 0%,#5543ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.contact-form .form-field{
+    position: relative;
+    margin: 32px 0;
+}
+.contact-form #input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #5543ca; 
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.contact-form #input-text:focus +.label,
+.contact-form #input-text.not-empty + .label{
+    transform: translateY(-24px);
+}
+.contact-form #input-text:focus{
+    outline: none;
+}
+.contact-form .label{
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;    
+}
+.contact-form .submit-btn{
+    display: inline-block;
+    background-image: linear-gradient(125deg,#a72879,#064497);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    justify-content: center;
+}
+.submit-btn{
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+}
+#input-text
+{
+    background: transparent;
+    /* border: none; */
+}

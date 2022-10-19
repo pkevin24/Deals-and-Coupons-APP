@@ -1,0 +1,10 @@
+.image{
+    height:40em; 
+    background-size:cover; 
+    /* width:auto; */
+    background-image:url('../assets/images/bg4.png');
+    /* background-size: cover; */
+    background-position:50% 50%;
+    position:relative;
+    width:100%;
+  }

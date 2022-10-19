@@ -1,0 +1,22 @@
+
+<section class="container1" style="background-color:pink ;">
+    <div class="container">
+        <div class="card-deck">
+            <div class="col-sm-3" id="cards" *ngFor="let data of coupons">
+                <div class="card" (click)="addCoupons(data)">
+                    <img class="card-img-top"
+                        src="{{data.imgUrl}}"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{data.couponName}}</h5>
+                        <label for="button" style="color:rgb(61, 29, 156) ;">REDEEM: &nbsp; </label>
+                       <button (click)="copyMessage('This goes to Clipboard')" value="click to copy"
+                            class="button-download pure-button">{{data.couponCode}}</button><br>
+                        <a href="{{data.linkUrl}}" target="_blank" style="color: rgb(234, 93, 33);" class="click">Click here!!!</a>
+                        <p class="card-text"><small class="text-muted">Have a good Day</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

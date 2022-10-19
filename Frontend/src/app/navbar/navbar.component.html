@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#" ><img src="assets\images\Megaphone.gif" alt="img" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <div class="spacing"></div>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/home">Home</a>
+        </li>
+        <div class="spacing"></div>
+        <li class="nav-item ">
+          <a class="nav-link" routerLinkActive="active" routerLink="/news">News</a>
+        </li>
+        <div class="spacing"></div>
+        <li class="nav-item ">
+            <a *ngIf="isLoggedIn()" class="nav-link" routerLinkActive="active" routerLink="/coupons" >Coupons</a>
+          </li>
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+        <li class="nav-item ">
+            <a *ngIf="isLoggedIn()" class="nav-link" routerLinkActive="active" routerLink="/deals">Deals</a>
+          </li>
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+          <li class="nav-item ">
+            <a *ngIf="isLoggedIn() && isAdmin()" class="nav-link" routerLinkActive="active" routerLink="/admin">Admin</a>
+        </li>
+        
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="!isLoggedIn()"><a routerLinkActive="active" routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li *ngIf="!isLoggedIn()"><a routerLinkActive="active" routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <!-- <li *ngIf="isLoggedIn()"><a routerLinkActive="active" (click)="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li> -->
+            <li><a *ngIf="isLoggedIn()" (click)="logout()" class="nav-link" routerLinkActive="active">Logout</a></li>
+          </ul>
+ 
+      <!-- </ul> -->
+    </div>
+  </nav>

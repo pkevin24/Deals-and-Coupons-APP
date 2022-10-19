@@ -1,0 +1,37 @@
+<section class="maincontainer">
+    <section class="container1">
+        <h1 class="title">Login</h1>
+        <div class="container">
+            
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                <small class="text-danger" style="font-size: large;">{{msg}}</small>
+
+                <div class="contact-form row">
+                    <div class="form-field col-lg-6">
+                        <input  ngModel id="input-text" type="text" name="userName" required #userName="ngModel"
+                        [class.is-invalid]="userName.invalid && userName.touched">
+                        <label for="userName" class="label">UserName</label>
+                        <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">User Name cannot be blank</small>
+                    </div>
+                    <div class="form-field col-lg-6">
+                        <input id="input-text"  ngModel type="password" name="password" required #password="ngModel"
+                        [class.is-invalid]="password.invalid && password.touched">
+                        <label for="password" class="label">password</label>
+                        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password cannot be blank</small>
+
+                    </div>
+                    <div class="form-field col-lg-6">
+                        <button [disabled]="loginForm.form.invalid" type="submit"  class="submit-btn" value="button">Login</button>
+                    </div>
+
+                </div>
+            </form><br>
+            <div>
+                <a routerLink="/signup" style="color: rgba(0, 0, 0, 0.664);">New User ? click here to signup !</a>
+              </div>
+            <div>
+
+            </div>
+        </div>
+    </section>
+</section>

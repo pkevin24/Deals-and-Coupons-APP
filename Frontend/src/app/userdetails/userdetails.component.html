@@ -1,0 +1,44 @@
+<section class="containerMain">
+    <div style="border: 5px solid #05445E; border: radius 10px;background-color:#a8d2fa;text-align: center;" id="header">
+    <h1 style="font-size:3.2rem;letter-spacing:0.8;color:black;font-weight: 900;font-family: 'Bebas Neue', cursive">User Details</h1>
+</div>
+
+<div class="container">
+<!-- <div class="text-center">
+    <a href="/form" class="btn btn-danger btn-rounded mt-2 mb-2" data-toggle="modal" data-target="#modalLoginForm">Add Users</a>
+  </div> -->
+  
+<div class="table-responsive" id="horizontal-scroll">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>User Id</th>
+            <th>UserName</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Points</th>
+            <!-- <th>Role</th>
+            <th>Deals</th>
+            <th>Coupons</th> -->
+            <th>Coupons and Deals</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let data of userDatas">
+            <td>{{data.id}}</td>
+            <td>{{data.userName}}</td>
+            <td>{{data.password}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.points}}</td>
+            <td><a id="click" [routerLink]="['/couponsdeal',data.id]"><fa-icon [icon]="faedit"></fa-icon></a></td>
+            <!-- <td></td>
+            <td></td>
+            <td></td> -->
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+</section>

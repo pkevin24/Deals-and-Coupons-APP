@@ -1,0 +1,18 @@
+.container1{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+#cards{
+    padding: 30px;
+}
+button{
+    color: black;
+    background-color: rgb(194, 239, 79);
+   
+    border-color: brown;
+}
+.click{
+    font-weight: bold;
+}
+

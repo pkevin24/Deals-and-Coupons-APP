@@ -1,0 +1,69 @@
+<section class="container1">
+    <div style="border: 5px solid #05445E; border: radius 10px;background-color:#a8d2fa;text-align: center;" id="header">
+        <h1 style="font-size:3.2rem;letter-spacing:0.8;color:black;font-weight: 900;font-family: 'Bebas Neue', cursive">
+         Deals Details</h1>
+      </div>
+    <div class="container">
+        <div class="table-responsive" id="horizontal-scroll">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Deal Id</th>
+                        <th>Deal Name</th>
+                        <th>Price</th>
+                        <th>Cashback</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of deals">
+                        <!-- <td><span (click)="songdetail(data.id)"><a [routerLink]="['/song',data.id]"><i class="fa-regular fa-circle-play"></i></a></span>{{data.id}}</td> -->
+                        <td>{{data.dealId}}</td>
+                        <td>{{data.dealName}}</td>
+                        <td>{{data.price}}</td>
+                        <td>{{data.cashback}}</td>
+                        <td>{{data.url}}</td>
+                        <!-- <td><button type="submit" (click)="deleteDeals(data.dealId)" class="delete">X</button></td> -->
+                        <!-- <td><span id="del" (click)="deleteDeals(data.dealId)"><i class="fa-solid fa-trash"></i></span></td> -->
+                        <!-- <td [routerLink]="['/admin/deals', data.dealId]"><a>UPDATE</a></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<section class="container2">
+    <div style="border: 5px solid #05445E; border: radius 10px;background-color:#a8d2fa;text-align: center;" id="header">
+        <h1 style="font-size:3.2rem;letter-spacing:0.8;color:black;font-weight: 900;font-family: 'Bebas Neue', cursive">
+        Coupons Details</h1>
+      </div>
+    <div class="container">
+        <div class="table-responsive" id="horizontal-scroll">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Coupon Id</th>
+                        <th>Coupon Name</th>
+                        <th>Code</th>
+                        <th>Type</th>
+                        <!-- <th>Count</th> -->
+                        <th>Image</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of coupons">
+                        <!-- <td><span (click)="songdetail(data.id)"><a [routerLink]="['/song',data.id]"><i class="fa-regular fa-circle-play"></i></a></span>{{data.id}}</td> -->
+                        <td>{{data.couponId}}</td>
+                        <td>{{data.couponName}}</td>
+                        <td>{{data.couponCode}}</td>
+                        <td>{{data.couponType}}</td>
+                        <!-- <td>{{data.couponCounts}}</td> -->
+                        <td>{{data.imgUrl}}</td>
+                        <td>{{data.linkUrl}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

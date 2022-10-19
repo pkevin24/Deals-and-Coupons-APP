@@ -1,0 +1,51 @@
+<div class="container1" style="background:rgb(242, 202, 195) ;">
+    <form class="form1" [formGroup]="editDeals" (ngSubmit)="editData()" >
+      <div  id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="background:rgb(242, 202, 195) ;border-color: black;">
+            <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Edit Deals</h4>
+            </div>
+            <div class="modal-body mx-2">
+              <div class="md-form mb-3">
+                <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+                <input type="text" id="defaultForm-email" class="form-control validate" placeholder="dealName"
+                  name="dealName" formControlName="dealName">
+                <!-- <label data-error="wrong" data-success="right" for="defaultForm-email"></label> -->
+              </div>
+              <div class="md-form mb-3">
+                <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+                <input type="text" id="defaultForm-email" class="form-control validate" placeholder="price" name="price"
+                  formControlName="price">
+                <!-- <label data-error="wrong" data-success="right" for="defaultForm-email"></label> -->
+              </div>
+              <div class="md-form mb-3">
+                <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+                <input type="text" id="defaultForm-email" class="form-control validate" placeholder="imageUrl"
+                  name="imageUrl" formControlName="imageUrl">
+                <!-- <label data-error="wrong" data-success="right" for="defaultForm-email"></label> -->
+              </div>
+              <div class="md-form mb-3">
+                <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+                <input type="text" id="defaultForm-email" class="form-control validate" placeholder="url" name="url"
+                  formControlName="url">
+                <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Duration</label> -->
+              </div>
+              <div class="md-form mb-3">
+                <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+                <input type="text" id="defaultForm-email" class="form-control validate" placeholder="cashback"
+                  name="cashback" formControlName="cashback">
+                <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Duration</label> -->
+              </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button class="btn btn-default">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>

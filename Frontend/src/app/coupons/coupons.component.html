@@ -1,0 +1,96 @@
+<section class="containerMain">
+  <div style="border: 5px solid #05445E; border: radius 10px;background-color:#a8d2fa;text-align: center;" id="header">
+  <h1 style="font-size:3.2rem;letter-spacing:0.8;color:black;font-weight: 900;font-family: 'Bebas Neue', cursive">Coupons Details</h1>
+</div>
+<div class="container">
+<form class="form1" [formGroup]="addCoupons" (ngSubmit)="SaveData()">
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Add coupons</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-2">
+        <div class="md-form mb-3">
+          <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+          <input type="text" id="defaultForm-email" class="form-control validate" placeholder="couponName" name="couponName" formControlName="couponName">
+          <span style="color: red;" *ngIf="couponName && couponName.invalid && couponName.touched">Input field not valid</span>
+        </div>
+        <div class="md-form mb-3">
+          <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+          <input type="number" id="defaultForm-email" class="form-control validate" placeholder="couponCode" name="CouponCode" formControlName="couponCode">
+          <!-- <label data-error="wrong" data-success="right" for="defaultForm-email"></label> -->
+          <span style="color: red;" *ngIf="couponCode && couponCode.invalid && couponCode.touched">Input field not valid</span>
+        </div>
+        <div class="md-form mb-3">
+          <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+          <input type="text" id="defaultForm-email" class="form-control validate" placeholder="couponType" name="couponType" formControlName="couponType">
+          <!-- <label data-error="wrong" data-success="right" for="defaultForm-email"></label> -->
+          <span style="color: red;" *ngIf="couponType && couponType.invalid && couponType.touched">Input field not valid</span>
+        </div>
+        <div class="md-form mb-3">
+          <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+          <input type="number" id="defaultForm-email" class="form-control validate" placeholder="couponCounts" name="couponCounts" formControlName="couponCounts">
+          <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Duration</label> -->
+          <span style="color: red;" *ngIf="couponCounts && couponCounts.invalid && couponCounts.touched">Input field not valid</span>
+        </div>
+        <div class="md-form mb-3">
+          <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+          <input type="text" id="defaultForm-email" class="form-control validate" placeholder="imgUrl" name="imgUrl" formControlName="imgUrl">
+          <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Duration</label> -->
+          <span style="color: red;" *ngIf="imgUrl && imgUrl.invalid && imgUrl.touched">Input field not valid</span>
+        </div>
+        <div class="md-form mb-3">
+          <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+          <input type="text" id="defaultForm-email" class="form-control validate" placeholder="linkUrl" name="linkUrl" formControlName="linkUrl">
+          <!-- <label data-error="wrong" data-success="right" for="defaultForm-email">Duration</label> -->
+          <span style="color: red;" *ngIf="linkUrl && linkUrl.invalid && linkUrl.touched">Input field not valid</span>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+<div class="text-center">
+  <a href="/form" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm"><button class="btn btn-primary btn-lg sharp" type="button">Add Coupons</button></a>
+</div>
+<div class="table-responsive" id="horizontal-scroll">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Coupon Id</th>
+            <th>Coupon Name</th>
+            <th>Code</th>
+            <th>Type</th>
+            <th>Count</th>
+            <th>Image</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let data of couponData">
+            <!-- <td><span (click)="songdetail(data.id)"><a [routerLink]="['/song',data.id]"><i class="fa-regular fa-circle-play"></i></a></span>{{data.id}}</td> -->
+            <td>{{data.couponId}}</td>
+            <td>{{data.couponName}}</td>
+            <td>{{data.couponCode}}</td>
+            <td>{{data.couponType}}</td>
+            <td>{{data.couponCounts}}</td>
+            <td>{{data.imgUrl}}</td>
+            <td>{{data.linkUrl}}</td>
+            <td><fa-icon [icon]="fatrash" (click)="deleteCoupons(data.couponId)"></fa-icon></td>
+            <td [routerLink] = "['/admin/coupons', data.couponId]"><fa-icon [icon]="faedit"></fa-icon></td>
+
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+</section>

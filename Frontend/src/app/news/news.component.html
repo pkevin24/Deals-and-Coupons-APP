@@ -1,0 +1,20 @@
+<section class="container1" style="background:rgb(194, 94, 78) ;">
+    <div style="border: 5px solid #05445E; border: radius 10px;background-color:#a8d2fa;text-align: center;"
+        id="header">
+        <h1 style="font-size:3.2rem;letter-spacing:0.8;color:black;font-weight: 900;font-family: 'Bebas Neue', cursive">
+            NEWS</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let d of topHeadingData" class="col-lg-3 mt-5 mb-3">
+                <div class="box">
+                    <img src="{{d.urlToImage}}" width="100%">
+                    <h5 class="mt-2 mb-2">{{d.title}}</h5>
+                    <!-- <p>{{d.content}}</p> -->
+                    <a href="{{d.url}}" target="_blank" class="btn btn-dark btn-sm">Read more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

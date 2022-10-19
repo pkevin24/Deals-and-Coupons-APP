@@ -1,0 +1,45 @@
+.container {
+  height: 600px;
+}
+.containerMain {
+  width: 100%;
+  background-color: rgb(1, 117, 135);
+}
+.center {
+  display: flex;
+  /* background-color: #ff1124; */
+  justify-content: center;
+  padding-top: 20px;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+tr:hover {
+  background: rgb(255, 255, 255);
+}
+#horizontal-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+  clear: both;
+  width: 100%;
+}
+.table {
+  min-width: rem-calc(640);
+}
+#del {
+  cursor: pointer;
+}
+#click{
+  color: black;
+  font-weight: 500;
+}

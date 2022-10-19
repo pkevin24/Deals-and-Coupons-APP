@@ -1,0 +1,20 @@
+<section class="container1">
+    <div class="container">
+        <div class="card-deck">
+            <div class="col-sm-4" id="cards" *ngFor="let data of deals">
+                <a href="{{data.url}}" target="_blank" >
+                    <div class="card" (click)="addDeals(data)">
+                        <img class="card-img-top" src="{{data.imageUrl}}" alt="Card image cap" style="width: 60%;height:60%">
+                        <div class="card-body">
+                            <h5 class="card-title">{{data.dealName}}</h5>
+                            <h6 class="rate">{{data.price| currency:'INR' }} <span class="unrate" style="text-decoration: line-through;">{{ data.price+0.2*data.price| currency:'INR' }}</span></h6>
+                            <p class="card-text"><small class="text-muted">HOT DEALS</small></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+
+    </div>
+</section>

@@ -1,0 +1,77 @@
+<!-- <section class="container1" style="background-color: rgb(201, 89, 71);">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-centre">
+                    <h1>Coupons & Deals</h1>
+                </div>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </form>
+                  <a routerLink="/signup">New User ? click here to signup !</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section> -->
+<section class="container1" style="background:rgb(242, 202, 195) ;">
+  <div style="border: 5px solid #05445E; border: radius 10px;background-color:#a8d2fa;text-align: center;" id="header">
+    <h1 style="font-size:3.2rem;letter-spacing:0.8;color:black;font-weight: 900;font-family: 'Bebas Neue', cursive">
+      Login</h1>
+  </div>
+  <br><br>
+  <div class="container">
+    <div class="c1" style="padding-left:25vw ; padding-right: 25vw;">
+      <div class="text-center">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+          <!--{{loginForm.form.valid}}-->
+          <small class="text-danger">{{msg}}</small>
+          <div class="form-group" style="font-weight: bold;">
+            <label for="exampleInput1">UserName</label>
+            <input type="text" ngModel class="form-control" id="userName" aria-describedby="Help" name="userName" placeholder="Enter your Username" required #userName="ngModel"
+            [class.is-invalid]="userName.invalid && userName.touched">
+            <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">User Name cannot be blank</small>
+          <!-- <div class="form-group" style="font-weight: bold;">
+            <label for="exampleInput1">UserName</label>
+            <input type="text" ngModel class="form-control" id="userName" aria-describedby="Help" name="userName" placeholder="Enter your Username">
+           //  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div> -->
+          <div class="form-group" style="font-weight: bold;">
+            <!-- <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+              
+            </div> -->
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="text" ngModel name="password" class="form-control" id="password"
+              placeholder="Enter your password" required #password="ngModel"
+              [class.is-invalid]="password.invalid && password.touched">
+              <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password cannot be blank</small>
+          </div>
+          <!-- <button class="btn btn-primary" (click)='showHidePassword()'> {{ showPassword ? 'Hide' : 'Show' }}
+            Password</button> -->
+          <button [disabled]="loginForm.form.invalid" type="submit" class="btn btn-primary" value="Login">Login</button>
+            <!-- <input [type]=" showPassword ? 'text' : 'password' " ngModel name="password" class="form-control" id="password"
+              placeholder="Enter your password"> -->
+          </div>
+          <!-- <button class="btn btn-primary" (click)='showHidePassword()'> {{ showPassword ? 'Hide' : 'Show' }}
+            Password</button> -->
+          <!-- <input type="submit" class="btn btn-primary" value="Login"> -->
+        </form><br>
+        <div>
+          <a routerLink="/signup">New User ? click here to signup !</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

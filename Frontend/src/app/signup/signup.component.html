@@ -1,0 +1,180 @@
+<!-- <section class="container1" style="background:rgb(242, 202, 195) ;">
+
+  <div style="border: 5px solid #05445E; border: radius 10px;background-color:#a8d2fa;text-align: center;" id="header">
+    <h1 style="font-size:3.2rem;letter-spacing:0.8;color:black;font-weight: 900;font-family: 'Bebas Neue', cursive">
+      SIGN-UP</h1>
+  </div>
+  <br><br>
+  <div class="container">
+    <div class="text-center">
+        <div class="form-group" style="font-weight: bold;">
+                  <form #registerForm="ngForm" (ngSubmit)="registerUser()">
+                    <small class="text-danger" *ngIf="check">UserName or Email already exists</small>
+                    <div class="row mb-4">
+                      <div class="container">
+                        <div class="text-center">
+                          <div class="form-group" style="font-weight: bold;">
+                            <label for="Input1">Name</label>
+                            <input name="name" type="text" class="form-control" id="Input1" aria-describedby="nameHelp"
+                              placeholder="Enter Name" [(ngModel)]="user.name" required #name="ngModel"
+                              [class.is-invalid]="name.invalid && name.touched">
+                            <div *ngIf="name.errors && (name.invalid && name.touched)">
+                              <small class="text-danger" *ngIf="name.errors?.['required']">Name is a required
+                                field</small>
+                              <small class="text-danger" *ngIf="name.errors?.['pattern']">Enter a valid name</small>
+                            </div>
+
+                          </div>
+                          <div class="form-group" style="font-weight: bold;">
+                            <label for="Input2">UserName</label>
+                            <input name="userName" type="text" class="form-control" id="Input2"
+                              aria-describedby="userHelp" placeholder="Enter User Name" [(ngModel)]="user.userName"
+                              required #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched">
+                            <div *ngIf="userName.errors && (userName.invalid && userName.touched)">
+                              <small class="text-danger" *ngIf="userName.errors?.['required']">User Name is a required
+                                field</small>
+                              <small class="text-danger" *ngIf="userName.errors?.['pattern']">Enter a valid User
+                                Name</small>
+                            </div>
+                          </div>
+                          <div class="form-group" style="font-weight: bold;">
+                            <label for="Input3">phoneNumber</label>
+                            <input name="phoneNumber" type="number" class="form-control" id="Input3"
+                              aria-describedby="numHelp" placeholder="Enter Phone Number" [(ngModel)]="user.phoneNumber"
+                              required #phoneNumber="ngModel" pattern="[- +()0-9]+"
+                              [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched">
+                            <div *ngIf="phoneNumber.errors && (phoneNumber.invalid && phoneNumber.touched)">
+                              <small class="text-danger" *ngIf="phoneNumber.errors?.['required']">Phone Number is a
+                                required
+                                field</small>
+                              <small class="text-danger" *ngIf="phoneNumber.errors?.['pattern']">Enter a valid Phone
+                                Number</small>
+                            </div>
+                          </div>
+                          <div class="form-group" style="font-weight: bold;">
+                            <label for="Input4">Email address</label>
+                            <input name="email" type="email" class="form-control" id="Input4"
+                              aria-describedby="emailHelp" placeholder="Enter Email" [(ngModel)]="user.email" required
+                              pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #email="ngModel"
+                              [class.is-invalid]="email.invalid && email.touched">
+                            <div *ngIf="email.errors && (email.invalid && email.touched)">
+                              <small class="text-danger" *ngIf="email.errors?.['required']">Email is a required
+                                field</small>
+                              <small class="text-danger" *ngIf="email.errors?.['pattern']">Enter a valid Email</small>
+                            </div>
+                          </div>
+                          <div class="form-group" style="font-weight: bold;">
+                            <label for="Input5" class="form-label">Password</label>
+                            <input name="password" type="text" class="form-control" id="Input5"
+                              placeholder="Enter Password" [(ngModel)]="user.password" required
+                              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                              #password="ngModel" [class.is-invalid]="password.valid && password.touched">
+                            <div *ngIf="password.errors && (password.invalid && password.touched)">
+                              <small class="text-danger" *ngIf="password.errors?.['required']">Password is a required
+                                field</small>
+                              <small class="text-danger" *ngIf="password.errors?.['pattern']">Enter a valid
+                                Password</small>
+                            </div>
+                          </div><br>
+
+                          <button [disabled]="registerForm.form.invalid" type="submit"
+                            class="btn btn-primary">Register</button><br>
+                          <div><br>
+                            <a routerLink="/login">Already registered ? click here to Login !</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br><br>
+      </form><br>
+    </div>
+    </div>
+  </div>
+
+</section> -->
+
+<section class="maincontainer">
+  <section class="container1">
+      <h1 class="title">Register</h1>
+      <div class="container">
+          
+          <form #registerForm="ngForm" (ngSubmit)="registerUser()">
+            <small class="text-danger" *ngIf="check">UserName or Email already exists</small>
+
+              <div class="contact-form row">
+                  <div class="form-field col-lg-6">
+                    <input name="name" type="text" id="input-text" aria-describedby="nameHelp"
+                    placeholder="Enter Name" [(ngModel)]="user.name" required #name="ngModel"
+                    [class.is-invalid]="name.invalid && name.touched">
+                  <div *ngIf="name.errors && (name.invalid && name.touched)">
+                    <small class="text-danger" *ngIf="name.errors?.['required']">Name is a required
+                      field</small>
+                    <small class="text-danger" *ngIf="name.errors?.['pattern']">Enter a valid name</small>
+                  </div>
+                  </div>
+                  <div class="form-field col-lg-6">
+                    <input name="userName" type="text"  id="input-text"
+                    aria-describedby="userHelp" placeholder="Enter User Name" [(ngModel)]="user.userName"
+                    required #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched">
+                  <div *ngIf="userName.errors && (userName.invalid && userName.touched)">
+                    <small class="text-danger" *ngIf="userName.errors?.['required']">User Name is a required
+                      field</small>
+                    <small class="text-danger" *ngIf="userName.errors?.['pattern']">Enter a valid User
+                      Name</small>
+                  </div>
+                </div>
+                  <div class="form-field col-lg-6">
+                    <input name="phoneNumber" type="number"  id="input-text"
+                    aria-describedby="numHelp" placeholder="Enter Phone Number" [(ngModel)]="user.phoneNumber"
+                    required #phoneNumber="ngModel" pattern="[- +()0-9]+"
+                    [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched">
+                  <div *ngIf="phoneNumber.errors && (phoneNumber.invalid && phoneNumber.touched)">
+                    <small class="text-danger" *ngIf="phoneNumber.errors?.['required']">Phone Number is a
+                      required
+                      field</small>
+                    <small class="text-danger" *ngIf="phoneNumber.errors?.['pattern']">Enter a valid Phone
+                      Number</small>
+                  </div>
+                  </div>
+                  <div class="form-field col-lg-6">
+                    <input name="password" type="text" id="input-text"
+                    placeholder="Enter Password" [(ngModel)]="user.password" required
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                    #password="ngModel" [class.is-invalid]="password.valid && password.touched">
+                  <div *ngIf="password.errors && (password.invalid && password.touched)">
+                    <small class="text-danger" *ngIf="password.errors?.['required']">Password is a required
+                      field</small>
+                    <small class="text-danger" *ngIf="password.errors?.['pattern']">Enter a valid
+                      Password</small>
+                  </div>
+
+                </div>
+
+                <div class="form-field col-lg-8">
+                  <input name="email" type="email"  id="input-text"
+                  aria-describedby="emailHelp" placeholder="Enter Email" [(ngModel)]="user.email" required
+                  pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" #email="ngModel"
+                  [class.is-invalid]="email.invalid && email.touched">
+                <div *ngIf="email.errors && (email.invalid && email.touched)">
+                  <small class="text-danger" *ngIf="email.errors?.['required']">Email is a required
+                    field</small>
+                  <small class="text-danger" *ngIf="email.errors?.['pattern']">Enter a valid Email</small>
+                </div>
+
+              </div>
+              <br>
+                  <div class="form-field col-lg-6">
+                      <button [disabled]="registerForm.form.invalid" type="submit"  class="submit-btn" value="button">REGISTER</button>
+                  </div>
+
+              </div>
+          </form><br>
+          <div>
+              <a routerLink="/login" style="color: black;">Existing User Ah? click here to login !</a>
+            </div>
+          <div>
+
+          </div>
+      </div>
+  </section>
+</section>
