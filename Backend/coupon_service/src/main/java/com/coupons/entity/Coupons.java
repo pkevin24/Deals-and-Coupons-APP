@@ -116,3 +116,5 @@ public class Coupons {
 	@Transient
 	public static final String SEQUENCE_NAME = "coupons_sequence";
 }
+
+//check something
